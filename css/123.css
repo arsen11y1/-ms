@@ -1,0 +1,169 @@
+/* Основні стилі */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Шапка сайту */
+header {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+
+#headerVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+/* Головний контент */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+section, nav {
+    width: 30%;
+    margin: 20px 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+    width: 40%;
+}
+
+section h2, nav h2 {
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+section p, section ul, nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    background-color: #e6f3ff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #0073e6;
+    display: block;
+}
+
+ul li a:hover {
+    background-color: #cce7ff;
+}
+
+/* Стилі для вбудованого відео */
+.youtube-video {
+    margin-top: 20px;
+}
+
+.youtube-video iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0073e6;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section, nav {
+        width: 80%;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .youtube-video iframe {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .youtube-video iframe {
+        height: 150px;
+    }
+}
